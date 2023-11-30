@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Luxurious+Roman&family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Noto+Serif:ital,wght@1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;1,500;1,600;1,800&family=Romanesco&display=swap');
+
+:root {
+    --primary-bg-color: #D4F4DD; /* light green */
+    --secondary-bg-color: #A1E6D1; /* baby green */
+    --accent-color: #12664F; /* dark green for accent */
+    --text-color: #FFFFFF; /* white text */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-style: sans-serif;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+    position: relative;
+}
+
+.logo {
+    font-size: 35px;
+    text-transform: uppercase;
+    padding: 0 30px;
+    line-height: 80px;
+    color: var(--text-color);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    width: 84%;
+}
+
+nav ul li {
+    display: block;
+    list-style: none;
+    margin: 0px 10px;
+    padding: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.home {
+    width: 100%;
+    padding: 185px 0px 300px 0px;
+    min-height: 70vh;
+    background-color: var(--primary-bg-color);
+}
+
+.container {
+    text-align: center;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+}
+
+h1 {
+    font-style: italic;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+    font-size: 45px;
+    font-weight: 900;
+}
+
+h2 {
+    font-style: italic;
+    line-height: 1.5;
+    word-spacing: 0.1rem;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.about {
+    width: 100%;
+    padding: 78px 0px 120px 0px;
+    background-color: var(--secondary-bg-color);
+}
+
+.about-img {
+    height: 500px;
+    border-radius: 15px;
+    width: 420px;
+}
+
+.about-me {
+    width: 550px;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-me > h2 {
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-style: normal;
+}
+
+.about-me > p {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+    color: var(--primary-bg-color);
+}
+
+button {
+    background: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+
+button:hover {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+    color: var(--accent-color);
+}
+
+.work-section {
+    width: 100%;
+    padding: 185px 0px;
+    background-color: var(--primary-bg-color);
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        padding: 50px 0;
+    }
+
+    .about-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-me {
+        width: 100%;
+    }
+}
+
+.image-gallery img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.1);
+}
+
+button, nav ul li a {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Update text color for My Work and Contact Me */
+.my-work h2,
+.contact-me h2 {
+    color: var(--accent-color);
+}
+
+/* Extend background color for Contact Me section */
+.contact-section {
+    background-color: var(--secondary-bg-color);
+    padding: 185px 0; /* Adjust padding as needed */
+}
+
+/* Update Contact Me text color */
+.contact-me p,
+.contact-links p {
+    color: var(--text-color);
+}
+
+/* Add this CSS for image gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-gallery img {
+    width: 30%; /* Adjust the width as needed */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+/* Add media query for responsive design */
+@media screen and (max-width: 768px) {
+    .image-gallery img {
+        width: 48%; /* Adjust the width for smaller screens */
+    }
+}
+
